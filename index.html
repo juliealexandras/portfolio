@@ -180,9 +180,13 @@
     }
 
     .card-foot {
+      display: flex; flex-direction: column;
+      padding: 16px 18px 18px; gap: 8px;
+    }
+
+    .card-top {
       display: flex; align-items: center;
-      justify-content: space-between;
-      padding: 14px 18px; gap: 12px;
+      justify-content: space-between; gap: 12px;
     }
 
     .tag {
@@ -193,21 +197,41 @@
       white-space: nowrap; flex-shrink: 0;
     }
 
-    .card-right {
-      display: flex; align-items: center;
-      justify-content: space-between; flex: 1; gap: 8px;
+    .card-title {
+      font-size: 14px; font-weight: 500;
+      color: var(--text); letter-spacing: -0.01em;
+      flex: 1;
     }
 
-    .card-title {
-      font-size: 13px; font-weight: 500;
-      color: var(--text); letter-spacing: -0.01em;
+    .card-sub {
+      font-size: 12px; line-height: 1.55;
+      color: var(--text-2);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-meta {
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+
+    .meta-tag {
+      font-size: 10px; font-weight: 500;
+      letter-spacing: 0.04em;
+      padding: 3px 8px; border-radius: 999px;
+      background: transparent;
+      border: 1px solid var(--sage-border);
+      color: var(--text-3);
+      white-space: nowrap;
     }
 
     .arrow {
-      font-size: 16px; color: var(--text-3);
+      font-size: 15px; color: var(--text-3);
       transition: transform 0.15s, color 0.15s; flex-shrink: 0;
     }
     .card:hover .arrow { transform: translateX(3px); color: var(--sage); }
+    .card-right { display: flex; align-items: center; gap: 8px; }
 
     /* ── FOOTER ── */
     .footer {
@@ -285,10 +309,18 @@
       <a href="#" class="card">
         <div class="thumb t1"></div>
         <div class="card-foot">
-          <span class="tag">Amazon · Alexa</span>
-          <div class="card-right">
-            <span class="card-title">Alexa+</span>
-            <span class="arrow">→</span>
+          <div class="card-top">
+            <span class="tag">Amazon · Alexa</span>
+            <div class="card-right">
+              <span class="card-title">Alexa+</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+          <p class="card-sub">Designing a unified opt-in experience for the next generation of Alexa.</p>
+          <div class="card-meta">
+            <span class="meta-tag">UX Designer</span>
+            <span class="meta-tag">1 yr 4 mo</span>
+            <span class="meta-tag">Multimodal · iOS · Android · Web</span>
           </div>
         </div>
       </a>
@@ -296,10 +328,18 @@
       <a href="#" class="card">
         <div class="thumb t2"></div>
         <div class="card-foot">
-          <span class="tag">Amazon · Alexa</span>
-          <div class="card-right">
-            <span class="card-title">Alexa+ Store</span>
-            <span class="arrow">→</span>
+          <div class="card-top">
+            <span class="tag">Amazon · Alexa</span>
+            <div class="card-right">
+              <span class="card-title">Alexa+ Store</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+          <p class="card-sub">Creating seamless experiences for the Alexa+ Store.</p>
+          <div class="card-meta">
+            <span class="meta-tag">UX Designer</span>
+            <span class="meta-tag">1 mo</span>
+            <span class="meta-tag">Alexa surfaces</span>
           </div>
         </div>
       </a>
@@ -307,10 +347,18 @@
       <a href="#" class="card">
         <div class="thumb t3"></div>
         <div class="card-foot">
-          <span class="tag">Amazon · Design Systems</span>
-          <div class="card-right">
-            <span class="card-title">Subscription UX Reference Library</span>
-            <span class="arrow">→</span>
+          <div class="card-top">
+            <span class="tag">Amazon · Design Systems</span>
+            <div class="card-right">
+              <span class="card-title">Subscription UX Reference Library</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+          <p class="card-sub">A unified specification library giving Amazon and Alexa partner teams a shared standard for subscription purchasing experiences.</p>
+          <div class="card-meta">
+            <span class="meta-tag">UX Designer</span>
+            <span class="meta-tag">3 mo</span>
+            <span class="meta-tag">Multimodal · iOS · Android · Web</span>
           </div>
         </div>
       </a>
@@ -318,10 +366,18 @@
       <a href="#" class="card">
         <div class="thumb t4"></div>
         <div class="card-foot">
-          <span class="tag">Amazon · Accessibility</span>
-          <div class="card-right">
-            <span class="card-title">Alexa Accessibility</span>
-            <span class="arrow">→</span>
+          <div class="card-top">
+            <span class="tag">Amazon · Accessibility</span>
+            <div class="card-right">
+              <span class="card-title">Alexa Accessibility</span>
+              <span class="arrow">→</span>
+            </div>
+          </div>
+          <p class="card-sub">Evolving voice-forward to sensory-centric experiences.</p>
+          <div class="card-meta">
+            <span class="meta-tag">UX Designer</span>
+            <span class="meta-tag">6 mo</span>
+            <span class="meta-tag">Alexa surfaces</span>
           </div>
         </div>
       </a>
